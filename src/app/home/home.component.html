@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="home-conatiner">
+  <div class="all-movies">
+    <div class="trending-movies">
+      <div class="top">
+        <h4>Trending Movies</h4>
+      </div>
+      <div class="movies-thumbnail">
+        <div class="movie" *ngFor="let movie of trendingMovies">
+          <div class="cover" (click)="gotoMovies('trending' , movie.id)">
+            <img [src]="movie.cover" alt="" />
+          </div>
+          <div class="detail">
+            <div class="name" (click)="gotoMovies('trending' , movie.id)">{{movie.name}}</div>
+            <div class="rating">{{movie.rating}}
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="threatre-movies">
+        <div class="top">
+          <h4>Popular in Threatre</h4>
+        </div>
+        <div class="movies-thumbnail">
+          <div class="movie" *ngFor="let movie of threatreMovies">
+            <div class="cover" (click)="gotoMovies('threatre' , movie.id)">
+              <img [src]="movie.cover" alt="" />
+            </div>
+            <div class="detail">
+              <div class="name" (click)="gotoMovies('threatre' , movie.id)">{{movie.name}}</div>
+              <div class="rating">{{movie.rating}}</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="popular-movies">
+          <h4>All time Popular</h4>
+          <div class="movies-thumbnail">
+
+            <div class="movie" *ngFor="let movie of popularMovies">
+              <div class="cover" (click)="gotoMovies('popular' , movie.id)">
+                <img [src]="movie.cover" alt="" />
+              </div>
+              <div class="name"  (click)="gotoMovies('popular' , movie.id)">{{movie.name}}</div>
+              <div class="rating">{{movie.rating}}</div>
+            </div>
+
+          </div>
+        </div>
+      </div>

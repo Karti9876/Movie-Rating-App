@@ -1,0 +1,82 @@
+.movie-container{
+    width: 1000px;
+    /* margin: 0 auto; */
+
+}
+.top{
+    display: flex;
+}
+.left{
+    width: 450px;
+}
+.name{
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 100px;
+}
+.cover{
+    /* width: 400px; */
+    /* height: 500px; */
+    padding-left: 100px;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin-left: 180px;
+    margin-top: 20px;
+
+}
+img{
+    width: 70%;
+    height: 70%;
+    margin-top: 30px;
+    object-fit: cover;
+}
+.right{
+    width: 900px;
+}
+.title{
+    margin-top: 50px;
+    font-size: 30px;
+}
+.form-group{
+    margin-top: 20px;
+    /* justify-content: space-between; */
+}
+label{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+button{
+    margin-top: 30px;
+    /* display: flex;
+    align-items: end;
+    justify-content: end; */
+}
+.bottom{
+    margin-left: 50px;
+    /* margin-top: 50px; */
+}
+.title{
+    margin-bottom: 30px;
+}
+.reviews{
+    width: 1000px;
+}
+.review{
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: bisque;
+}
+.author{
+    font-size: 18px;
+    font-weight: bold;
+}
+.no-reviews{
+    
+        margin-bottom: 25px;
+        padding: 20px;
+        background-color: bisque;
+
+}

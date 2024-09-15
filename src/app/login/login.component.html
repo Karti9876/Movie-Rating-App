@@ -1,0 +1,59 @@
+<div class="login-container">
+    <img class="img" src=".\assets\images\Movie.avif">
+    <div class="logo">Film Finder</div>
+    <div class="desc">FilmFinder is your ultimate destination for discovering, rating, and reviewing movies from all
+        genres and eras. Whether you're a casual moviegoer or a seasoned cinephile, FilmFinder offers a seamless
+        experience to help you navigate through the vast world of cinema.
+
+        With an extensive database of films, FilmFinder allows you to search for movies by title, director, genre, or
+        release year, ensuring that you find exactly what you're looking for. Each movie profile includes detailed
+        information, including cast and crew, plot summaries, trailers, and critic reviews.</div>
+    @if(isLoginview){
+    <div class="login-form">
+        <div class="form-group">
+            <label for="uname">Username</label>
+            <input type="text" name="Uname" #user class="form-control" [(ngModel)]="loginObj.Username">
+        </div>
+        <div class="form-group">
+            <label for="pword">Password</label>
+            <input type="password" name="password" #pass class="form-control" [(ngModel)]="loginObj.Password">
+        </div>
+        <div class="btn-container">
+            <!-- <div class="error">{{errMsg}}</div> -->
+            <!-- <button class="btn btn-dark" (click)="login()">Login </button> -->
+            <button class="btn btn-dark" (click)="loginUser()">Login </button>
+            <!-- <button (click)="Signup()">Register</button> -->
+             <p>Don't have account ? <a class="url" (click)="isLoginview = false">Register </a></p>
+
+        </div>
+    </div>
+
+    }
+    @else{
+    <div class="login-form">
+        <div class="form-group">
+            <label for="uname">Username</label>
+            <input type="text" name="uname" #user class="form-control" [(ngModel)]="signupObj.Username">
+        </div>
+        <div class="form-group"></div>
+        <label for="email">Email</label>
+        <input type="text" name="email" class="form-control" [(ngModel)]="signupObj.Email">
+    <div class="form-group">
+        <label for="pword">Password</label>
+        <input type="password" name="pword" class="form-control" [(ngModel)]="signupObj.Password">
+    </div>
+    <div class="btn-container">
+        <!-- <div class="error">{{errMsg}}</div> -->
+        <!-- <button class="btn btn-dark" (click)="login()">Login </button> -->
+         <button (click)="Signup()">Register</button>
+        <a class="url" (click)="isLoginview = true">Login Here</a>
+
+    
+
+    </div>
+</div>
+
+}
+
+
+</div>
